@@ -25,27 +25,41 @@ def draw():
     global y
     
     # 1. Use the background() function to draw the donkey
-    
+    background(0)
+    #background.hide()
     # 2. Use the rect() function to draw a box in the upper left
     # corner of the screen:
-    # rect(0, 0, 30, 30)
-    
+    rect(0, 0, 30, 30)
+    println(mouseX)
+    println(mouseY)
     # 3. Now find the x and y coordinates where the tail attaches
-    # to the donkey and draw another box with a side of 50
-    
+    # to the donkey and draw another box with a side of 50 700,140
+    fill(0)
+    rect(700,140,50,50)
     # 4. Change your code so the donkey is only shown when the
     # mouse is inside the corner bounding box. 
     #
     # Hint: check if mouseX is greater than 0 and less than 30
     # and y is greater than 0 and less than 30
-    
+    if mouseX < 30 :
+        if mouseY < 30 :
+            background(donkey)
+
     # 5. Check that when the mouse is outside the corner box,
     # you should show a solid color background.
     
     # 6. Use the image() method to draw the tail at the mouseX
     # and mouseY location. For example,
-    # image(tail, mouseX, mouseY)
-    
+    None
+    if x != None and y != None:
+        background(donkey)
+        image(tail, x, y)
+    if mousePressed :
+        x = mouseX
+        y = mouseY
+        background(donkey)
+        image(tail, x, y)
+        
     # 7. Now, adjust your code so the tail sticks when you click the
     # mouse (this means it will no longer move when the mouse moves)
     #

@@ -15,7 +15,8 @@ from tkinter import messagebox, simpledialog, Tk
 if __name__ == '__main__':
     # TODO) Ask the user for their score on the FIRST test and store their
     #  score in a variable
-
+    one = simpledialog.askinteger("","first test score")
+    two = simpledialog.askinteger()
     # TODO) Ask the user for their score on the SECOND test and store their
     #  score in a variable
 
