@@ -7,29 +7,43 @@ You’re going to draw a face with eyes that will follow the mouse!
 
 def setup():
     # 2. Import your image using the following code:
-    # global face
-    # face = loadImage("big_eye_bird.png")
+    global face
+    face = loadImage("big_eye_bird.png")
 
     
     # 3. Set the size of your sketch and the size of your image to be
     # the same by entering the following code in the setup method.
-    # size(800, 600)
-    # face.resize(width, height)
+    size(800, 600)
+    face.resize(width, height)
 
     
 def draw():
     # 4. Draw your image using:
-    # global face
-    # background(face)
+    global face
+    background(face)
 
     # 5. Place a white ellipse over the left eye of your image.
-    # fill(<your color>)
-    # ellipse(x, y, width, height)
+    fill(255)
+    ellipse(271, 160, 320, 210)
     println(str(mouseX) + ' ' + str(mouseY))   
-    
+    if is_mouse_inside_eye(271,160,100,55):
+        fill(0)
+        ellipse(mouseX, mouseY, 120, 100)
+    else:
+        position = get_eye_position(271, 160, 105, 55)  
+        ellipse(position.x, position.y, 55 * 2, 55 * 2)
+    fill(255)
+    ellipse(530, 160, 320, 210)
+    println(str(mouseX) + ' ' + str(mouseY))   
+    if is_mouse_inside_eye(530,160,100,55):
+        fill(0)
+        ellipse(mouseX, mouseY, 120, 100)
+    else:
+        position = get_eye_position(271, 160, 105, 55)  
+        ellipse(position.x, position.y, 55 * 2, 55 * 2)
     # 6. Now add a pupil (the black part) to the left eye earlier.
     # Use the pupil x and y variables for the position.
-    
+
     # 7. Run the program and check if the left eye is in the correct
     # position
     

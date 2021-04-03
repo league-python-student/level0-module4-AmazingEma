@@ -35,11 +35,16 @@ if __name__ == '__main__':
     money_in_dollars = 3.00
 
     # TODO) Write a while loop that ends when you have no money left
+    while(True):
+        vending_machine(money_in_dollars)
 
         # TODO) Call the vending_machine() function and save the money spent
         #  in a variable, for example:
-        #  money_spent = vending_machine(money_in_dollars)
-
+        money_spent = vending_machine(money_in_dollars)
+        if money_spent == 0:
+            break
+        elif:
+            money_in_dollars = money_in_dollars -
         # TODO) If no money was spent, tell the user how much money they still
         #  have and exit the while loop
 

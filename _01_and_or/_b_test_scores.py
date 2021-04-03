@@ -16,12 +16,22 @@ if __name__ == '__main__':
     # TODO) Ask the user for their score on the FIRST test and store their
     #  score in a variable
     one = simpledialog.askinteger("","first test score")
-    two = simpledialog.askinteger()
+    two = simpledialog.askinteger("","second test score")
     # TODO) Ask the user for their score on the SECOND test and store their
     #  score in a variable
-
+    total = (one + two)
+    score = total/2
     # TODO) Take the average score of both tests (total score / 2)
-
+    if score <= 89.5:
+        messagebox.showinfo("You got an A","You are an awesome student!")
+    elif score <= 79.5:
+        messagebox.showinfo("You got a B","Good job")
+    elif score <= 69.5:
+        messagebox.showinfo("you got a C","Study harder next time")
+    elif score <= 59.5:
+        messagebox.showinfo("you got a D",":(")
+    else:
+        messagebox.showinfo("you failed","try harder on your retake")
     # TODO) Use if statements to check the average score and print the
     #  corresponding letter grade back to the user. Also, give a different
     #  message according to their grade. Example, for an 'A' grade:

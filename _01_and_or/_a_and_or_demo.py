@@ -35,4 +35,4 @@ if __name__ == '__main__':
     if age > 12 and height_inches > 48:
         messagebox.showinfo(None, 'You can ride the roller coaster!')
     else:
-        messagebox.showerror(None, 'You are not tall enough and old enough to ride the roller coaster')
+        messagebox.showerror(None, 'You are not tall enough and/or old enough to ride the roller coaster')
